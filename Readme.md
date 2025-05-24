@@ -50,7 +50,7 @@ The app requires an active internet connection and a valid OpenWeatherMap API ke
 Example input format: Athens, gr
 
 ## 📄 License
-This project is licensed under the MIT License. See LICENSE for details.
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 
 Built by Damianos Mav
