@@ -31,7 +31,14 @@ def get_weather(city, country_code):
         humidity = json["main"]["humidity"]
         wind_speed = json["wind"]["speed"]
 
-        forecast.set(f"Current weather: {weather} {weather_description}\n Temperature in Fahrenheit: {temperature_f}°F\n Temperature in Celcious: {temperature_c}°C\n Current humidity: {humidity}% \n Current wind speed: {wind_speed}km/h")
+        forecast_text = (
+                            f"Current weather: {weather} - {weather_description}\n"
+                            f"Temperature in Fahrenheit: {temperature_f}°F\n"
+                            f"Temperature in Celsius: {temperature_c}°C\n"
+                            f"Current humidity: {humidity}%\n"
+                            f"Current wind speed: {wind_speed} km/h"
+                        )
+        forecast.set(forecast_text)
 
     
 
@@ -46,7 +53,7 @@ city_country_code = tk.StringVar()
 forecast = tk.StringVar()
 
 label = tk.Label(app, text="Enter the name of you city and country code")
-label_forecast = tk.Label(app, textvariable=forecast)
+label_forecast = tk.Label(app, textvariable=forecast, justify="left")
 entry = tk.Entry(app, justify="center", textvariable= city_country_code)
 
 entry.insert(0, "Athens, gr")
